@@ -6,7 +6,7 @@
 
 # -------------------------- SETTING WORKING DIRECTORY -----------------------------
 getwd()
-setwd("C:/Users/biobl/Desktop/RStudio/DATAVIZ/CHARTS/WA")
+setwd("C:/file path /WA")
 
 
 # ---------------------------   PACKAGE LOADING    -----------------------------
@@ -70,7 +70,7 @@ miChat <- miChat |>
 #                  Visualization parameters for all charts
 
 sysfonts::font_add(
-  family = "Font Awesome Brands",#descargar manualmente
+  family = "Font Awesome Brands",#descargar manualmente y guardar en una carpeta (docs)
   regular = here::here("docs", "fa-brands-400.ttf")
 )
 
@@ -198,8 +198,8 @@ miChat_summary2 <- miChat |>
 # Cambiar los nombres de los autores
 miChat_summary2 <- miChat_summary2 |> 
   mutate(author = case_when(
-    author == "Im a cyborg but that's ok" ~ "Yo",        
-    author == "Mi mini Bióloga ᵐᵃᵍʸ ´･ᴗ･`" ~"Ella"  
+    author == "I am..." ~ "Yo",        
+    author == "She is..." ~"Ella"  
   ))
 
 #                                 b) Graph 
@@ -347,8 +347,8 @@ word_freq_per_user <- miChat |>
 # Cambiar los nombres de los autores
 word_freq_per_user <- word_freq_per_user |> 
   mutate(author = case_when(
-    author == "Im a cyborg but that's ok" ~ "Yo",        # Cambiar "Im" a "Yo"
-    author == "Mi mini Bióloga ᵐᵃᵍʸ ´･ᴗ･`" ~"Ella" 
+    author == "I am..." ~ "Yo",        # Cambiar "Im" a "Yo"
+    author == "She is ..." ~"Ella" 
   ))
 
 
